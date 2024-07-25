@@ -1,8 +1,8 @@
 settings:
-  title: '丸子服务监控'
+  title: 'wanzi Status Page'
   url: 'https://status-page.eidam.dev' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
-  daysInHistogram: 90 # number of days you want to display in histogram
+  daysInHistogram: 30 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: 'All Systems Operational'
@@ -15,24 +15,24 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: www-cloudflare-com
-    name: 网课商城
+  - id: shop-wanziwk-shop
+    name: wanziwk(商城)
     description: '小小网课！稳定高分!'
     url: 'https://shop.wanziwk.shop/'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: ChatGpt
+  - id: chat-wanziwk-cn
+    name: wanziAi(AI)
     description: '有点傻的AI服务'
     url: 'https://chat.wanziwk.cn/'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
     
-  - id: workers-cloudflare-com # unique identifier
-    name: 网课代理
+  - id: wanziwk-cn # unique identifier
+    name: wanzidl(代理)
     description: '赚点小钱😭' # default=empty
     url: 'https://wanziwk.cn/' # URL to fetch
     method: GET # default=GET
