@@ -16,26 +16,27 @@ settings:
 
 monitors:
   - id: shop-wanziwk-shop
-    name: wanziwk(商城)
+    name: wanziwk.shop(商城)
     description: '小小网课！稳定高分!'
     url: 'https://shop.wanziwk.shop/'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: chat-wanziwk-cn
-    name: wanziAi(AI)
-    description: '有点傻的AI服务'
-    url: 'https://chat.wanziwk.cn/'
-    method: GET
-    expectStatus: 200
-    linkable: true # allows the title to be a link, default=true
     
   - id: wanziwk-cn # unique identifier
-    name: wanzidl(代理)
+    name: wanziwk.cn(后台)
     description: '赚点小钱😭' # default=empty
     url: 'https://wanziwk.cn/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
+    
+  - id: chat-wanziwk-cn
+    name: wanziwk.cn(ChatGpt)
+    description: '有点傻的AI服务'
+    url: 'https://chat.wanziwk.cn/'
+    method: GET
+    expectStatus: 200
+    linkable: true # allows the title to be a link, default=true
